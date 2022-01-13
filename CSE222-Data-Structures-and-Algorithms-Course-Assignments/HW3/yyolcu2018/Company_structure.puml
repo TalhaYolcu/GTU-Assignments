@@ -1,0 +1,467 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "yyolcu2018.Company"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1578853941 { 
+   	label=TLinkedList
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Node232133007[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Node&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   data: E [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   next: Node&lt;E&gt; [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1773511788 { 
+   	label=yyolcu2018
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Admin1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Admin</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   c: Company [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   informing: boolean [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add_branch(b: Branch)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add_branch_employee(index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ query_for_supply(branch_index: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove_branch(index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove_branch_employee(index: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Bookcase1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Bookcase</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Branch1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Branch</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   admin_inform: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   bookcase: HybridList&lt;Bookcase&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   branchemployee: TArrayList&lt;BranchEmployee&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   customer: TArrayList&lt;Customer&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   meetingtable: HybridList&lt;MeetingTable&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   officecabinet: HybridList&lt;OfficeCabinet&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   officechair: HybridList&lt;OfficeChair&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   officedesk: HybridList&lt;OfficeDesk&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># add_branch_employee()</TD></TR>
+<TR><TD ALIGN="LEFT" ># add_customer(customer1: Customer)</TD></TR>
+<TR><TD ALIGN="LEFT" ># add_product(p: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" ># change_the_stock(p: Product, number: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get_branchemployee(index: int): BranchEmployee</TD></TR>
+<TR><TD ALIGN="LEFT" ># inform(p: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" ># make_sale(name: String, stock: int, name2: String): Order</TD></TR>
+<TR><TD ALIGN="LEFT" ># query_stock(p: Product): int</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_branch_employee()</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_product(p: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" ># search(name: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+BranchEmployee1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BranchEmployee</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   branch: Branch [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># add_order_to_the_customer(c1: Customer, o1: Order)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add_product(p: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ change_the_stock(p: Product, number: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ create_subscription(p1: Person): Customer</TD></TR>
+<TR><TD ALIGN="LEFT" >- inform_admin(p: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" ># make_sale(name: String, stock: int, name2: String): Order</TD></TR>
+<TR><TD ALIGN="LEFT" >+ query_stock(p: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove_product(x: Product)</TD></TR>
+<TR><TD ALIGN="LEFT" ># view_previous_orders_of_customer(c1: Customer)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Company1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Company</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   admin: TArrayList&lt;Admin&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   branch: TLinkedList&lt;Branch&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># add_admin()</TD></TR>
+<TR><TD ALIGN="LEFT" ># add_branch(b: Branch)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAdmin(index: int): Admin</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get_branch(index: int): Branch</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_branch(index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_branch_employee(index: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Customer1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Customer</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   customer_number: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   log: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   orders: HybridList&lt;Order&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># add_order(o: Order)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ buy_online(c1: Company, name: String, name2: String, stock: int, branch_index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ buy_shop(c1: Company, b1: Branch, branch_index: int, name: String, stock: int, name2: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ list_all(c1: Company)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ list_branch(c1: Company, index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ list_product(c1: Company, name: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ login(cn: String, e: String, p: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ view_previous_orders()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+HybridList1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)HybridList&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   storage: TLinkedList&lt;TArrayList&lt;E&gt;&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add(e: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ change_the_stock(e: E, number: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ query(e: E): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(e: E)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MeetingTable1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MeetingTable</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+OfficeCabinet1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)OfficeCabinet</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+OfficeChair1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)OfficeChair</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+OfficeDesk1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)OfficeDesk</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Order1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Order</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   number: int [1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Person1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Person</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   e_mail: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   password: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   sub: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   surname: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ subscribe(be1: BranchEmployee): Customer</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Product1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Product</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   color_name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   model_name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   stock: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># change_the_stock(number: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TArrayList1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TArrayList&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   capacity: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   data: E[] [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   size: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add(index: int, value: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add(e: E): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ clear()</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ contains(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ indexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ iterator(): TIterator&lt;E&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ lastIndexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- reallocate()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ set(index: int, newvalue: E): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ toArray(): Object[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TLinkedList1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TLinkedList&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   head: Node&lt;E&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   size: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add(entry: E): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add(index: int, entry: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addAfter(node: Node&lt;E&gt;, item: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addFirst(item: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addLast(e: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ clear()</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ contains(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- getNode(index: int): Node&lt;E&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ indexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ iterator(): TIterator&lt;E&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ lastIndexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- removeFirst(): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- removeLast(): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- removeafter(node: Node&lt;E&gt;): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ set(index: int, entry: E): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ toArray(): Object[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Admin1773511788 -> Company1773511788[label="c
+[0..1]"];
+Branch1773511788 -> Bookcase1773511788[label="bookcase
+[0..1]"];
+Branch1773511788 -> BranchEmployee1773511788[label="branchemployee
+[0..1]"];
+Branch1773511788 -> Customer1773511788[label="customer
+[0..1]"];
+Branch1773511788 -> HybridList1773511788[label="bookcase
+[0..1]"];
+Branch1773511788 -> HybridList1773511788[label="meetingtable
+[0..1]"];
+Branch1773511788 -> HybridList1773511788[label="officecabinet
+[0..1]"];
+Branch1773511788 -> HybridList1773511788[label="officechair
+[0..1]"];
+Branch1773511788 -> HybridList1773511788[label="officedesk
+[0..1]"];
+Branch1773511788 -> MeetingTable1773511788[label="meetingtable
+[0..1]"];
+Branch1773511788 -> OfficeCabinet1773511788[label="officecabinet
+[0..1]"];
+Branch1773511788 -> OfficeChair1773511788[label="officechair
+[0..1]"];
+Branch1773511788 -> OfficeDesk1773511788[label="officedesk
+[0..1]"];
+Branch1773511788 -> TArrayList1773511788[label="branchemployee
+[0..1]"];
+Branch1773511788 -> TArrayList1773511788[label="customer
+[0..1]"];
+BranchEmployee1773511788 -> Branch1773511788[label="branch
+[0..1]"];
+Company1773511788 -> Admin1773511788[label="admin
+[0..1]"];
+Company1773511788 -> Branch1773511788[label="branch
+[0..1]"];
+Company1773511788 -> TArrayList1773511788[label="admin
+[0..1]"];
+Company1773511788 -> TLinkedList1773511788[label="branch
+[0..1]"];
+Customer1773511788 -> HybridList1773511788[label="orders
+[0..1]"];
+Customer1773511788 -> Order1773511788[label="orders
+[0..1]"];
+HybridList1773511788 -> TArrayList1773511788[label="storage
+[0..1]"];
+HybridList1773511788 -> TLinkedList1773511788[label="storage
+[0..1]"];
+Person1773511788 -> Customer1773511788[arrowhead=none, arrowtail=empty, dir=both];
+Product1773511788 -> Bookcase1773511788[arrowhead=none, arrowtail=empty, dir=both];
+Product1773511788 -> MeetingTable1773511788[arrowhead=none, arrowtail=empty, dir=both];
+Product1773511788 -> OfficeCabinet1773511788[arrowhead=none, arrowtail=empty, dir=both];
+Product1773511788 -> OfficeChair1773511788[arrowhead=none, arrowtail=empty, dir=both];
+Product1773511788 -> OfficeDesk1773511788[arrowhead=none, arrowtail=empty, dir=both];
+TLinkedList1773511788 -> Node232133007[label="head
+[0..1]"];
+    
+}
+@enduml

@@ -1,0 +1,36 @@
+load  R1,00   
+load  R2,01   
+addi  R1,R1,R2   
+load  R2,02    
+load  R3,03   
+addi  R2,R2,R3   
+addi  R1,R1,R2   
+
+load  R2,04    
+load  R3,05   
+addi  R2,R2,R3 
+load  R3,06   
+load  R4,07  
+addi  R3,R3,R4   
+addi  R2,R3,R2   
+addi  R1,R1,R2   
+load  R2,08   
+load  R3,09  
+addi  R2,R2,R3   
+load  R3,10  
+load  R4,11  
+addi  R3,R3,R4   
+addi  R2,R3,R2   
+addi  R1,R1,R2  
+load  R2,12    
+load  R3,13
+addi  R2,R2,R3   
+load  R3,14   
+load  R4,15  
+addi  R3,R3,R4   
+addi  R2,R3,R2   
+addi  R1,R1,R2   
+ror   R1,4       
+load  R2,15
+and   R1,R1,R2
+halt

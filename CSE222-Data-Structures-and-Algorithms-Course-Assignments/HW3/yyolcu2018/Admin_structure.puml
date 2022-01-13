@@ -1,0 +1,287 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "yyolcu2018.Admin"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1578853941 { 
+   	label=TLinkedList
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Node232133007[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Node&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   data: E [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   next: Node&lt;E&gt; [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1773511788 { 
+   	label=yyolcu2018
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Admin1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Admin</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   c: Company [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add_branch(b: Branch)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add_branch_employee()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove_branch(index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove_branch_employee(index: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Branch1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Branch</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   branchemployee: TArrayList&lt;BranchEmployee&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   customer: TArrayList&lt;Customer&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># add_branch_employee()</TD></TR>
+<TR><TD ALIGN="LEFT" ># add_customer(customer1: Customer)</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get_branchemployee(index: int): BranchEmployee</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_branch_employee()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+BranchEmployee1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BranchEmployee</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   bookcase: HybridList&lt;Bookcase&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   branch: Branch [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   meetingtable: HybridList&lt;MeetingTable&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   officecabinet: HybridList&lt;OfficeCabinet&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   officechair: HybridList&lt;OfficeChair&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   officedesk: HybridList&lt;OfficeDesk&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ create_subscription(p1: Person): Customer</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Company1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Company</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   admin: TArrayList&lt;Admin&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   branch: TLinkedList&lt;Branch&gt; [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># add_admin()</TD></TR>
+<TR><TD ALIGN="LEFT" ># add_branch(b: Branch)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAdmin(index: int): Admin</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get_branch(index: int): Branch</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_branch(index: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># remove_branch_employee(index: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Customer1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Customer</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   customer_number: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TArrayList1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TArrayList&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   capacity: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   data: E[] [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   size: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add(index: int, value: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add(e: E): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ clear()</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ contains(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ indexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ iterator(): TIterator&lt;E&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ lastIndexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- reallocate()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ set(index: int, newvalue: E): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ toArray(): Object[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TLinkedList1773511788[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TLinkedList&lt;E&gt;</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   head: Node&lt;E&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   size: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add(entry: E): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ add(index: int, entry: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addAfter(node: Node&lt;E&gt;, item: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addFirst(item: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addLast(e: E)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ clear()</TD></TR>
+<TR><TD ALIGN="LEFT" ># clone(): Object</TD></TR>
+<TR><TD ALIGN="LEFT" >+ contains(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ get(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- getNode(index: int): Node&lt;E&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ indexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ iterator(): TIterator&lt;E&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ lastIndexOf(o: Object): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(index: int): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(o: Object): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ remove(): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- removeFirst(): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- removeLast(): E</TD></TR>
+<TR><TD ALIGN="LEFT" >- removeafter(node: Node&lt;E&gt;): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ set(index: int, entry: E): E</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ toArray(): Object[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Admin1773511788 -> Company1773511788[label="c
+[0..1]"];
+Branch1773511788 -> BranchEmployee1773511788[label="branchemployee
+[0..1]"];
+Branch1773511788 -> Customer1773511788[label="customer
+[0..1]"];
+Branch1773511788 -> TArrayList1773511788[label="branchemployee
+[0..1]"];
+Branch1773511788 -> TArrayList1773511788[label="customer
+[0..1]"];
+Company1773511788 -> Admin1773511788[label="admin
+[0..1]"];
+Company1773511788 -> Branch1773511788[label="branch
+[0..1]"];
+Company1773511788 -> TArrayList1773511788[label="admin
+[0..1]"];
+Company1773511788 -> TLinkedList1773511788[label="branch
+[0..1]"];
+TLinkedList1773511788 -> Node232133007[label="head
+[0..1]"];
+    
+}
+@enduml

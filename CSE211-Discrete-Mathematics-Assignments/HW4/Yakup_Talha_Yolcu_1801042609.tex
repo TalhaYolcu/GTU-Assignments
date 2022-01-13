@@ -1,0 +1,147 @@
+\documentclass[a4 paper]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\homework}[6]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf CSE 211:~Discrete Mathematics \hfill {\small (#2)}} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Instructor: {\rm #3} \hfill Name: {\rm #5} \hfill Student Id: {\rm #6}} \hfill}
+       \hbox to 6.28in { {\it Assistant: #4  \hfill #6}}
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#5 -- #1}{#5 -- #1}
+   \vspace*{4mm}
+}
+
+\newcommand{\problem}[2]{~\\\fbox{\textbf{Problem #1}}\hfill (#2 points)\newline\newline}
+\newcommand{\subproblem}[1]{~\newline\textbf{(#1)}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Hy}{\mathcal{H}}
+\newcommand{\VS}{\textrm{VS}}
+\newcommand{\solution}{~\newline\textbf{\textit{(Solution)}} }
+
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\0}{\mathbf{0}}
+
+
+\begin{document}
+\homework{Homework \#4}{Due: 17/01/21}{Dr. Zafeirakis Zafeirakopoulos}{Gizem S\"ung\"u}{Yakup Talha Yolcu}{1801042609}
+
+\problem{1}{15+15=30}
+Consider the nonhomogeneous linear recurrence relation $a_n$ = 3$a_{n-1}$ + $2^n$ .\\
+\subproblem{a} Show that whether $a_n$ = $-2^{n+1}$ is a solution of the given recurrence relation or not. Show your work step by step.
+\solution
+\newline
+If we replace $a_n$ = $-2^{n+1}$ we will get : \newline
+$-2^{n+1}$= 3 ($-2^n$) + $2^n$ \newline
+$-2^{n+1}$ = $-2^{n+1}$ we can't have a solution by this equation
+
+\newline
+\subproblem{b} Find the solution with $a_0$ = 1.
+\solution
+\newline
+if we replace $a_n$ = x \newline
+characteristic equation = x-3 roots is x=3\newline
+my particular guess is A$2^n$ if I replace $a_n$ = A$2^n$ \newline
+ A$2^n$=3 A$2^n-1$ + $2^n$ \newline
+ We have A=-2 
+ \newline
+ so $a_n$ = $\alpha3^n$ - 2$2^n$ 
+ \newline If we try $a_0$ = 1 we will get: \newline
+ 1=$\alpha$-2 so $\alpha$=3 \newline
+ $a_n$ = 3 $3^n$ - 2 $2^n$
+\newline
+
+
+
+\problem{2}{35}
+Solve the recurrence relation f(n) = 4f(n-1) - 4f(n-2) + $n^2$ for f(0) = 2 and f(1) = 5. 
+\solution
+\newline
+$a_n$ = 4 $a_{n-1}$ - 4 $a_{n-2}$ + $n^2$ for $a_0$ = 2 and $a_1$ = 5 \newline
+Characteristic equation: $x^2$ - 4x + 4 = 0 \newline
+Roots are 2 and 2 so homogenius $a_n$ = $\alpha$$2^n$ + $\beta$$n2^n$ \newline
+Particular guess is : $a_n$ = $A_2n^2$ + $A_1n$ + $A_0$ \newline
+So $n^2$ = $A_2n^2$ + $A_1n$ + $A_0$ - 4 ($A_2(n-1)^2$ + $A_1(n-1)$ + $A_0$) + 4 ($A_2(n-2)^2$ + $A_1(n-2)$ + $A_0$) \newline
+$n^2$ = $A_2n^2$ + $A_1n$ + $A_0$ - 4$A_2n^2$ + 8$A_2n$ - 4$A_2$ - 4 $A_1n$ + 4$A_1$ - 4$A_0$ + 4$A_2n^2$ - 16 $A_2n$ + 16$A_2$ + 4 $A_1n$ - 8$A_1$ + 4$A_0$ \newline
+If we compare the $n^2$ 's coefficients  1=$A_2$ - 4$A_2$ + 4$A_2$ so $A_2$=1 \newline
+If we compare n's coefficients 0 = $A_1$+8$A_2$-4$A_1$-16$A_2$+4$A_1$\newline
+0=$A_1$+8-4$A_1$-16+4$A_1$\newline
+8=$A_1$ \newline If we compare the constants coefficients:
+0=$A_0$-4$A_2$-4$A_0$+16$A_2$-8$A_1$+4$A_0$ \newline
+0=$A_0$-4-4$A_0$+16-64+4$A_0$
+52=$A_0$
+
+so our guess is become :  $a_n$ = $n^2$ + 8n + 52
+\newline
+$a_n$ = $\alpha$$2^n$ + $\beta$$n2^n$ + $n^2$ + 8n + 52 \newline
+$\alpha$= -50 and $\beta$ = 22 so $a_n$ = (-50)$2^n$ + 22$n2^n$ + $n^2$ + 8n + 52 \newline
+
+
+
+\problem{3}{20+15 = 35}
+Consider the linear homogeneous recurrence relation $a_n$ = 2$a_{n-1}$ - 2$a_{n-2}$.
+\subproblem{a} Find the characteristic roots of the recurrence relation.
+\solution
+characteristic equation is: 
+$x^2$ - 2x + 2 = 0 \newline
+$\Delta$ = $b^2$ - 4ac=-4<0 \newline
+roots are : 1 - i and 1 + i
+so we will have : \newline
+$a_n$ = $\alpha (1-i)^n$ + $\beta(1+i)^n$
+
+\newline
+\subproblem{b} Find the solution of the recurrence relation with $a_0$ = 1 and $a_1$ = 2.
+\solution
+$a_n$ = $\alpha (1-i)^n$ + $\beta(1+i)^n$
+\newline
+if we try for $a_0$=$\alpha$ + $\beta$ = 1\newline
+if we try for  $a_1$=$\alpha(1-i)$ + $\beta(1+i)$ = 2 \newline
+if we replace $\alpha$=1-$\beta$
+1-$\beta$ (1-i) + $\beta$(1+i)=2 \newline
+2$\beta$i=1+i  multiply both sides with i \newline
+-2$\beta$ = i - 1 so $\beta$ = (1-i)/2 \newline
+$\alpha$=1-(1-i)/2 = (1 + i)/2
+\newline
+so $a_n$ = $\frac{1+i}{2} (1-i)^n$ + $\frac{1-i}{2}(1+i)^n$
+
+
+
+\end{document} 
+
+

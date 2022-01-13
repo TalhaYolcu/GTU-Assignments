@@ -1,0 +1,140 @@
+\documentclass[a4 paper]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\homework}[6]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf CSE 211:~Discrete Mathematics \hfill {\small (#2)}} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Name: {\rm #3} \hfill  {\rm #5} \hfill  {\rm #6}} \hfill}
+       \hbox to 6.28in { {\it Student Number: #4  \hfill #6}}
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#5 -- #1}{#5 -- #1}
+   \vspace*{4mm}
+}
+
+\newcommand{\problem}[2]{~\\\fbox{\textbf{Problem #1}}\hfill (#2 points)\newline\newline}
+\newcommand{\subproblem}[1]{~\newline\textbf{(#1)}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Hy}{\mathcal{H}}
+\newcommand{\VS}{\textrm{VS}}
+\newcommand{\solution}{~\newline\textbf{\textit{(Solution)}} }
+
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\0}{\mathbf{0}}
+
+
+\begin{document}
+\homework{Homework \#3}{Due: 04/01/21}{Yakup Talha Yolcu}{1801042609}{}{}
+
+
+\problem{1: Representing Graphs}{10}
+\solution
+
+\begin{figure*}[htb]
+	\centering
+	\includegraphics[scale=0.5]{matrix.png}
+	\caption{Matrix}
+	\label{fig:graph1}
+\end{figure*}
+
+In the vertical a-b-c-d-e I represented the going vertices. If any vertices have an edge to another point, I represented as 1, if not it is 0.
+
+
+
+\newpage
+\problem{2: Hamilton Circuits}{10+10+10=30}
+ \newline
+
+\begin{itemize}
+\item According to Dirac Theorem, Let G be a simple graph with n vertices, (n should be grater than or equal to 3) euch that degree of every vertex is at least n/2, then G has a Hamilton Circuit.
+\end{itemize}
+
+\subproblem{a} \solution\\
+This Graph has 17 vertices. But degree of every vertices is not greater than or equal to 17/2=8.5.
+So this Graph does not have a Hamilton Circuit.
+
+\begin{figure*}[htb]
+	\centering
+	\includegraphics[scale=0.3]{G1.png}
+	\caption{Graph G1}
+	\label{fig:graph1}
+\end{figure*}
+
+\subproblem{b} \solution\\
+
+\begin{figure*}[htb]
+	\centering
+	\includegraphics[scale=0.3]{G2.png}
+	\caption{Graph G1}
+	\label{fig:graph2}
+\end{figure*}
+
+In this Graph we have a vertex that have just 1 edge. So this Graph cannot have a Hamilton Circuit.
+\newpage
+\subproblem{c} \solution\\
+
+\begin{figure*}[htb]
+	\centering
+	\includegraphics[scale=0.3]{G3.png}
+	\caption{Graph G1}
+	\label{fig:graph2}
+\end{figure*}
+
+\problem{3: Applications on Graphs}{20}
+\solution
+\begin{figure*}[htb]
+	\centering
+	\includegraphics[scale=0.2]{GrapLesson.png}
+	\caption{Solution}
+	\label{fig:graph2}
+\end{figure*}
+\newline
+
+In the Graph, I represented the vertices as the lessons which are not took together by students.
+\newline
+So, I designed the time slots like in the figure.
+MATH101 , CSE211 and MATH243 are not took together, we can do these exams at the same time.
+It can be applied to CSE346 and CSE102 also.
+
+
+
+
+
+\end{document}

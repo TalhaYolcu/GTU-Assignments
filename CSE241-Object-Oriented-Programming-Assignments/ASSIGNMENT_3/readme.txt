@@ -1,0 +1,16 @@
+
+README.TXT FOR 1801042609-Yakup Talha Yolcu CSE241 HW3
+
+/*I DECIDED THE SITUATIONS LIKE THAT
+A B C D E F G H 
+ 1 5 5 5 5 5 5 7
+  2 6 6 6 6 6 6 8
+   2 6 6 6 6 6 6 8	
+    2 6 6 6 6 6 6 8	
+     2 6 6 6 6 6 6 8	
+      2 6 6 6 6 6 6 8	
+       2 6 6 6 6 6 6 8	
+        3 4 4 4 4 4 4 9	
+*/
+
+AND I DECIDED THE PLAY GAMES SEQUANTIALLY
