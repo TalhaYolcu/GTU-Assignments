@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "header.h": "c",
+        "sem.h": "c",
+        "mman.h": "c",
+        "types.h": "c"
+    }
+}
