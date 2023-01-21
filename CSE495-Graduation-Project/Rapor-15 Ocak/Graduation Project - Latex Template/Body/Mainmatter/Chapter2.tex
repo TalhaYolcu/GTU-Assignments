@@ -1,0 +1,85 @@
+\chapter{B Chapter}
+
+On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. \ref{fig:frogger}\ref{fig:froggerr}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{frog.jpg}
+    \caption{\label{fig:frogger}Another instance of the frog.}
+\end{figure}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{frog.jpg}
+    \caption{\label{fig:froggerr}And a third one.}
+\end{figure}
+
+\section{A Section}
+
+In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+
+\section{B Section}
+
+\subsection{A Subsection}
+The Algorithm \ref{labelOfAlgorithm} shows the pseudo code of...
+
+\begin{algorithm}
+\caption{Caption of the algorithm}
+\label{labelOfAlgorithm}
+\begin{algorithmic}
+\Require $n \geq 0$ % i.e. input
+\Ensure $y = x^n$  % i.e. output
+\State $y \gets 1$
+\State $X \gets x$
+\State $N \gets n$
+\While{$N \neq 0$}
+\If{$N$ is even}
+    \State $X \gets X \times X$
+    \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
+\ElsIf{$N$ is odd}
+    \State $y \gets y \times X$
+    \State $N \gets N - 1$
+\EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsubsection{A Subsubsection}
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{B subsection}
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+\section{C Section}
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? \ref{tab:widgetss} \cite{One, Two, Three}.
+
+\begin{table}[!htbp]
+\centering
+\caption{\label{tab:widgetss}Comparison of percentages.}
+\begin{tabular}{c|cc|cc}
+\hline
+Mode &  \multicolumn{2}{c}{Var} & \multicolumn{2}{c}{Cum}\\ 
+\hline
+1   &  17.5 & 19.1   & 17.5  & 19.1\\
+2   &  11.8 & 12.7   & 29.3  & 31.9\\
+3   &  6.6  &  5.6   & 35.9  & 37.4\\
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item first,
+\item second.
+\end{enumerate}
+\dots and bullet points \dots
+\begin{itemize}
+\item one bullet,
+\item two bullets.
+\end{itemize}
+
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+      = \frac{1}{n}\sum_{i}^{n} X_i\]
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+\begin{quote}
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+\end{quote}

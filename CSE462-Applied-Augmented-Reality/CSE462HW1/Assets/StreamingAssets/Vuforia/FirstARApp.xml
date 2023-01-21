@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="target1" size="6.000000 4.208955" />
+    <ImageTarget name="own_picture" size="6.000000 7.986207" />
+    <ImageTarget name="dino3" size="6.000000 3.360000" />
+    <ImageTarget name="dino4" size="6.000000 4.171004" />
+    <ImageTarget name="dino5" size="6.000000 4.494208" />
+    <ImageTarget name="ferrari" size="6.000000 3.600000" />
+    <ImageTarget name="marker" size="6.000000 3.360000" />
+  </Tracking>
+</QCARConfig>
