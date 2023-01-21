@@ -1,0 +1,24 @@
+
+
+in persons right eye -> to us, left eye up point 159
+                                        down point 145
+                                        left edge 33
+                                        right edge 133
+
+                                        one up of left edge 246
+                                        one down of left edge 7
+
+                                        one up of right edge 173
+                                        one down of right edge 155
+
+
+in persons left eye -> to us, right eye up point 386
+                                        down point 374
+                                        left edge 362
+                                        right edge 263
+
+                                        one up of left edge 398
+                                        one down of left edge 382
+
+                                        one up of right edge 466
+                                        one down of right edge 249
