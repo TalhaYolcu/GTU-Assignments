@@ -1,0 +1,66 @@
+cse437 final bahar 2023
+
+1-explain recursion overhead by comparing the following code fragments. Write down all memory accesses for eac fragment step by step
+
+Code A
+int factorial (int val) {
+	if(val==1) {
+		return 1;
+	}
+	return val * factorial(val-1);
+}
+
+Code B
+int factorial(int val) {
+	int res=1;
+	for(int i = val;i>1;--i) {
+		res = res*i;
+	}
+	return res;
+}
+
+
+2-scheduler accepts following tasks
+	Release Time	Execution Time	Period
+T1	0				5				18
+T2	1				5				17
+T3	2				5				16
+T4	7				3				10
+
+Draw scheduling diagram for
+i)Round robin with the quanta = 2
+ii)rate monotonic preemptive scheduler algoirthms
+
+Discuss the difference between results (Draw diagram for time <=20)
+
+3-Design a function in C++ that accepts a vector of integers and calculates its average using multiple threads running in a parallel.
+int average(const std::vector<int32_t> &date,const uint8_t numThread);
+Your function should use multiple threads to make the calculation faster by dividing input into multiple threads. Wait for all to terminate calculate all average. You can use class. Use c++11 threads.
+
+4-Consider the following solution to the problem of critical section where two threads try to acces a shared resource.
+
+Thread A
+flag1 = 1
+if(flag2!=0) {
+	//resolve contention
+}
+else {
+	//enter critic section
+}
+flag1=0;
+
+Thread B
+flag2=1;
+if(flag1!=0) {
+	//resolve contention
+}
+else {
+	//enter critic section
+}
+flag2=0;
+
+Are the code blocks critical section guaranteed to be mutually exclusive? If so explain how this solution works. If not explain how to guarantee it?
+
+
+
+Hazırlayan : Yakup Talha Yolcu

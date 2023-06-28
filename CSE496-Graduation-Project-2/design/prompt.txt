@@ -1,0 +1,10 @@
+I have project that, firstly has a splash screen. Don't worry about visual interface, I'll handle it
+I want you to show a splash screen to the user when user starts the app, I'll provide necesarry asset file, don't worry about it
+App will be written in Flutter-Dart. After splash screen, if user is has login before and selected remember me on that login screen, then show the main screen.
+If user has not login before, show signup screen. In signup screen, email, Name, surname, nickname, password, password confirm inputs should be taken.
+There should be a text about : "Already have an account, Sign in", if user presses sign in text, user should forwarded to signin screen
+There should be also sign up with Google option.
+In sign in screen, nickname and password inputs should be taken. There should be a text about : "Don't have an account? Sign Up". If user presses Sign Up text, user should be forwarded to signup screen
+There should be also sign in with Google option
+There should be a remember me option and it should work properly as I mentioned
+And the language of the application should use the systems- phones language.

@@ -1,0 +1,26 @@
+CSE414 Database Bahar 2023 Final
+1-Compare noSQL nad SQL. What are differences? Explain each one in detail. Which database makes sense in which situation? - 20p
+
+2-What is multilevel indexing? Explain in detail. Draw the the diagram Advantages - Disadvantages. Describe general multilevel indexing model. - 10p
+
+3- How do you use B+ - Tree for indexing? Draw diagram of it. (not as a data structure) Explain charactheristics of B+ - Tree for indexing. - 10p
+
+4-
+a) Write insert trigger that will deduct the ordered quantity from the stock. When the order is placed - 20p
+Write the query that is going to run trigger 2.5 p
+
+b)Write a trigger that will count the number of records and if the count is bigger than 3, it will give a warning and wont let you delete, when deleting records from order table - 20p
+Write the query that runs trigger - 2.5pt
+
+c)Write a nested query that obtain first name and last name of employees where their manager name is "Micheal Jordan" - 15pt
+
+for triggers use
+ order(order_ID,product_ID,order_quantitiy)
+ products(product_ID,price,amount,category)
+
+for last query : 
+Employee (first_name,lastname,b_date,salary,dept_id)
+Department(dept_id,dept_name,manager_name)
+
+
+Hazırlayan : Yakup Talha Yolcu

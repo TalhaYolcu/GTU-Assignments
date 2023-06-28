@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "622469182092",
+    "project_id": "flutter-fcm-6946b",
+    "storage_bucket": "flutter-fcm-6946b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622469182092:android:633efca31e25f139a541a9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_music_play"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622469182092-4v8fgdhe0nk7mrv97rts9i75p4qe6pi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZU1FXLzPvpOKoHNX_i8H3e1GcprhSMbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622469182092-4v8fgdhe0nk7mrv97rts9i75p4qe6pi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

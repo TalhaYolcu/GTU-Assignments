@@ -1,0 +1,8 @@
+Sorular
+1-Her iki fincanda da çay konduğunu, fincanın kaldırıldığını, ve fincandan içildiğini anlayan sensörler olmalı
+1.1-Senayolar nelerdir?
+2-Her bir fincanda bluetooth olmasına gerek yok, ancak her fincanda stm/arduino olmalı diye düşündüm
+2.1 her fincanda sensör olacağından bu sensörler bir şekilde kablo ile stm/arduino ya bağlı olmalı ki veriler işlenebilsin.
+Kablo gerektiği için de tek bir stm/arduino olamaz, bluetooth un mantığı kalmaz.
+3-Bir fincanda olduğunu varsayarsak, bt modülü olmayan fincan sensörleri sayesinde çay konduğunu vs tespit etti
+ ve diğer fincandaki bt modülüne sinyal gönderdi, bt modülü bu sinyali her iki telefona da iletti şeklinde yapılabilir mi?

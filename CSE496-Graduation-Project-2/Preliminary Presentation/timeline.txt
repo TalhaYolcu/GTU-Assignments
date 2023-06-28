@@ -1,0 +1,35 @@
+
+
+
+
+
+1st Meeting (Preliminary Presentation) April 05, 2023, Wednesday 12:30 – 14:00
+
+2nd Meeting May 17, 2023, Wednesday 12:30 – 14:00
+
+3rd Meeting (Final Presentation) June 21, 2023, Wednesday 09:30 – 12:30
+
+Demo June 22, 2023, Thursday 13:30 – 17:30
+
+
+10.04-23.04
+getting ready hardware
+creating mobile app project
+creating firebase database
+
+
+24.04-07.05
+Making connection of app with database
+Communicate sides between each other
+Set up hardware without bluetooth
+
+08.05-21.05
+Complete bluetooth communication between hardware and phones
+
+22.05-04.06
+Run tests
+
+05.06-18.06
+Talk with instructor, learn additional requirements/changes
+
+Requirements

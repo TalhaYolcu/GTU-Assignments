@@ -1,0 +1,32 @@
+CSE414 Database Bahar 2023 Vize
+
+1-Each employee can be mechanic that does repair job or salesman that sells and buys cars from clients
+Draw ER diagram - 10p
+Is there specialization needed, if there is show - 5p
+Is there week entity needed, if there is show it - 5p
+
+2-
+Give referential integtity example for a banking database. Show why there is referential integrity - 5p
+When referential integrity is violated, normal procedure is reject the action caused violation. What is alterntative in delete and update? Give sql example. - 10p
+
+3-
+Student ID	Major	Advisor
+111			Physic	Smith
+111			Music	Chan
+320			Math	Dobbs
+671			Physic	White
+803			Physic	Smith
+
+Each student may major in several subject. Each student has one advisor for a major. Each major has several advisors. Each advisor advises only one major. Each advisor advises several students in one major.
+What are functional dependencies ? - 10p
+Is table in BCNF ? If so give proof, if not decompose it. - 15p
+
+
+4- Use ER diagram in q1
+a - Write single sql adds a car to the car table.
+b- find set of all car models that has leather seats and manifactured in 2022 but not has a manifacturer mercedes.
+	-nested subquery 20p
+	-relational algebraic query 10p
+
+
+Hazırlayan : Yakup Talha Yolcu

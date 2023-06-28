@@ -1,0 +1,2 @@
+# GraduationProject-SevgililerFincani
+Daha önce yapılmış olan 2 adet fincan, bluetooth ile telefonunuza (her bir telefona) bağlanacak, içine çay konduğunda, kaldırıldığında içildiği anda farklı sinyal ve melodiler aynı anda iki tarafta da çalınacak bu sayede uzaktaki sevgilinizle bluetooth duygu bağı kuracaksınız. 
